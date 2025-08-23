@@ -134,7 +134,7 @@ const Login = () => {
 
           <div className='flex flex-col' >
             <button className='loginBtn' onClick={handleGoogleSignIn}><FaGoogle size={20} />Continue With Google</button>
-            <button className='loginBtn' onClick={handleGithubSignIn}><FaGithub size={20} />Continue With Github</button>
+            {/* <button className='loginBtn' onClick={handleGithubSignIn}><FaGithub size={20} />Continue With Github</button> */}
           </div>
           <p className='text-center mt-3'>Don't have an account? <Link to={'/signup'} className='underline cursor-pointer'>Sign up</Link></p>
         </div>
