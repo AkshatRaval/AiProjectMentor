@@ -146,10 +146,10 @@ const Home = () => {
                 <span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="group px-8 py-4 border-2 border-purple-500 text-purple-500 rounded-full font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center space-x-2" onClick={() => {setWatching(true)}}>
+              {/* <button className="group px-8 py-4 border-2 border-purple-500 text-purple-500 rounded-full font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center space-x-2" onClick={() => {setWatching(true)}}>
                 <Play className="w-5 h-5" />
                 <span>Watch Demo</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </section>
@@ -301,15 +301,7 @@ const Home = () => {
           </div>
         </footer>
       </div>
-      {watching && (
-        <div className='fixed top-[50%] left-[50%] transform translate-[-50%] md:p-10 p-2 bg-white border rounded-xl border-gray-300'>
-          <div className='relative'>
-            <X className='absolute -top-8 -right-8 cursor-pointer' onClick={() => {setWatching(false) }} />
-            <video src="https://docs.material-tailwind.com/demo.mp4" autoPlay={true} preload='true' className='rounded-xl'></video>
 
-          </div>
-        </div>
-      )}
     </div>
   );
 };
