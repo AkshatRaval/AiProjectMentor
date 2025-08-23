@@ -6,11 +6,20 @@ import { useAuth } from './AuthProvider'
 const Navigation = () => {
   const [isDark, setIsDark] = useState(false)
 
-  const { currentUser } = useAuth();
+  const { currentUser, logout } = useAuth();
 
   const toggleTheme = () => {
     setIsDark(!isDark)
   }
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      console.log("User logged out successfully");
+    } catch (err) {
+      console.error("Logout error:", err);
+    }
+  };
 
   return (
     <div>
@@ -37,7 +46,7 @@ const Navigation = () => {
                 </Link>
               ))}
             </div>
-        
+
 
             <div className="flex items-center space-x-4">
 
@@ -50,10 +59,10 @@ const Navigation = () => {
                     Sign Up
                   </Link>
                 </>) : (
-                <div className='flex items-center text-xs md:text-lg md:gap-2 bg-gradient-to-r from-purple-500 to-pink-500 cursor-pointer p-1 px-2 md:p-3.5 rounded-full text-white'>
-                  <LogOut className='scale-70'/>
+                <button className='flex items-center text-xs md:text-lg md:gap-2 bg-gradient-to-r from-purple-500 to-pink-500 cursor-pointer p-1 px-2 md:p-3.5 rounded-full text-white' onClick={handleLogout}>
+                  <LogOut className='scale-70' />
                   <p className='hidden md:flex'>Logout</p>
-                </div>
+                </button>
               )}
             </div>
           </div>
