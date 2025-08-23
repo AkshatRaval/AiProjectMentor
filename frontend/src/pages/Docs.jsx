@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play, ChevronRight, User, Calendar, CheckCircle, BarChart3, Settings, Clock, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function DocumentationPage() {
   const [activeStep, setActiveStep] = useState(0);
@@ -248,9 +249,9 @@ export default function DocumentationPage() {
           <p className="text-lg mb-6 opacity-90">
             Follow the steps above and turn your biggest goals into manageable weekly tasks.
           </p>
-          <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <Link to={'/signup'} className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Create Your Account
-          </button>
+          </Link>
         </div>
       </div>
     </div>
