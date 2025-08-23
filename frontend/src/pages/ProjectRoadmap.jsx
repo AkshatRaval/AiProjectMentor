@@ -157,7 +157,7 @@ const ProjectRoadmap = () => {
                                             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-t-lg">
                                                 <div className="flex items-center justify-between text-white">
                                                     <div className="flex items-center gap-3">
-                                                        <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-sm font-bold">
+                                                        <div className="h-8 bg-white/20 rounded-lg flex items-center justify-center w-fit px-2 text-sm font-bold">
                                                             {weekPlan.week}
                                                         </div>
                                                         <div>
