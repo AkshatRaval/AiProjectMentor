@@ -8,7 +8,9 @@ dotenv.config();
 const port = process.env.PORT
 const app = express();
 app.use(cors({
-    origin: "https://ai-projectapp.web.app",
+    origin: ["https://ai-project-mentor.vercel.app",
+        "http://localhost:/5173"
+    ],
     credentials: true
 }));
 app.use(express.json());
